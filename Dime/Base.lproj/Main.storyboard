@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="abD-jN-qMF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="abD-jN-qMF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -251,7 +251,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Transactions"/>
                                 <connections>
-                                    <action selector="transactions:" destination="Haa-vk-R2e" eventType="touchUpInside" id="VK9-ib-viX"/>
+                                    <action selector="transactionButton:" destination="Haa-vk-R2e" eventType="touchUpInside" id="ybo-FG-Re2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-gf-2Yi">
@@ -277,9 +277,6 @@
                                 <state key="normal" title="See My Charities">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="myCharities:" destination="Haa-vk-R2e" eventType="touchUpInside" id="BKc-nK-nmf"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYD-3p-xRV">
                                 <rect key="frame" x="144" y="252" width="87" height="29"/>
@@ -289,7 +286,7 @@
                                     <color key="titleColor" red="0.053923623331118491" green="0.65021611487555409" blue="0.70106281725888331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="bankButton:" destination="Haa-vk-R2e" eventType="touchUpInside" id="A31-91-pKq"/>
+                                    <action selector="connectBank:" destination="Haa-vk-R2e" eventType="touchUpInside" id="VLj-NR-Lhh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -319,7 +316,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9J3-AG-9uU" id="Ju5-W3-3Ka">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -348,14 +345,14 @@
                         <color key="sectionIndexBackgroundColor" red="0.49106898042063263" green="0.72638404186040617" blue="0.54490085368545349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="oneCell" textLabel="Lcj-Vv-wc2" detailTextLabel="Vhk-T0-C6j" rowHeight="170" style="IBUITableViewCellStyleSubtitle" id="6ku-3N-8hN" customClass="SingleCharityTableViewCell" customModule="Dime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="170"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6ku-3N-8hN" id="ERU-8l-FTy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lcj-Vv-wc2">
-                                            <rect key="frame" x="84" y="68" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="84" y="67" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -363,7 +360,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vhk-T0-C6j">
-                                            <rect key="frame" x="84" y="88.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="84" y="88" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -419,14 +416,14 @@
                         <color key="sectionIndexBackgroundColor" red="0.49106898040000002" green="0.72638404190000005" blue="0.54490085369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="oneCell" textLabel="dNY-nc-o7G" detailTextLabel="bE3-RU-o2g" rowHeight="170" style="IBUITableViewCellStyleSubtitle" id="DbE-3D-xYF" customClass="SingleCharityTableViewCell" customModule="Dime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="170"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DbE-3D-xYF" id="eNB-vV-0c7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dNY-nc-o7G">
-                                            <rect key="frame" x="84" y="68" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="84" y="67" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -434,7 +431,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bE3-RU-o2g">
-                                            <rect key="frame" x="84" y="88.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="84" y="88" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>

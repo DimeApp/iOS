@@ -30,7 +30,6 @@ class profileViewController: UIViewController {
     }
     @IBAction func browseCharity(_ sender: Any) {
         self.getCharities()
-    
     }
     @IBOutlet weak var profileTableView: UITableView!
     

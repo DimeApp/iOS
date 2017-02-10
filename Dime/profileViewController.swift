@@ -44,9 +44,10 @@ class profileViewController: UIViewController {
          auth().getBalance().then{
             
             (data) -> Void in
-            self.balanceLabel.text = String(describing: data["result"]["balance"])
+            //self.balanceLabel.text = String(format: "%2.f", String(describing:data["result"]["balance"]))
             print(data)
             self.balance = Float(String(describing: data["result"]["balance"]))
+            self.balanceLabel.text = "$" + String(format: "%.2f", self.balance)
             
             }.catch{_ in
                 print("these teeny tiny hands!!!")
@@ -105,7 +106,7 @@ class profileViewController: UIViewController {
 //                print(transactions)
                 let old_balance = self.balance
                 self.balance = self.roundUp(balance: self.balance, json:transactions) + self.balance
-                self.balanceLabel.text = String(self.balance)
+                self.balanceLabel.text = "$" + String(format: "%.2f", self.balance)
                 let x = self.balance - old_balance!
                 auth().updateBalance(updatedBalance: x ).then{_ in
                     print("yes")

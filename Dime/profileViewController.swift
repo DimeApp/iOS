@@ -41,7 +41,7 @@ class profileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        auth().getBalance().then{
+         auth().getBalance().then{
             
             (data) -> Void in
             self.balanceLabel.text = String(describing: data["result"]["balance"])
@@ -127,15 +127,44 @@ class profileViewController: UIViewController {
 
     
     func roundUp(balance:Float, json:JSON)->Float{
+        var pastTransactions: [String] = []
         var amt2Donate: Float = 0.0
         var amts : [Float] = []
         
+        // iterate through transactions, determine if each transaction is viable for rounding up
         for n in 0...json["result"]["transactions"].count
         {
-            //let x: Float = (json["result"]["transaction"][n]["amount"])
+            var isPastTransaction = true
+            
+            // retrieve pastTransactions, if it doesn't exist in userDefaults, create it
+            let defaults = UserDefaults.standard
+            if (defaults.object(forKey: "pastTransactions") == nil){
+                let emptyStringArray: [String] = []
+                defaults.set(emptyStringArray, forKey: "pastTransactions")
+            }
+            else{
+                pastTransactions = defaults.object(forKey: "pastTransactions") as! [String]
+            }
+
+            // check if currTransaction is in pastTransactions
+            let currTransactionDate: String = String(describing: json["result"]["transactions"][n]["date"])
+            let currTransctionName: String = String(describing: json["result"]["transactions"][n]["name"])
+            
+            let currTransaction: String = currTransctionName + currTransactionDate
+            
+            if pastTransactions.contains(currTransaction){
+                break
+            }
+            // if not, append currTransaction to pastTransactions
+            else{
+                pastTransactions.append(currTransaction)
+                isPastTransaction = false
+                defaults.set(pastTransactions, forKey: "pastTransactions")
+            }
+            
             if let x = Float(String(describing: json["result"]["transactions"][n]["amount"])){
             print(x)
-            if(x >= Float(0))
+            if(x >= Float(0) && !isPastTransaction)
             {
                 amts.append(x)
             }

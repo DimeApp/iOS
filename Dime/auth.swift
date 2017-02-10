@@ -273,12 +273,12 @@ class auth {
         
     }
     
-    func addUserCharity(updatedBalance:Float) -> Promise<JSON>{
+    func addUserCharity(charityToAdd: String) -> Promise<JSON>{
         let sessionToken = UserDefaults.standard.value(forKey: "sessionToken") as! String
         let url = baseURL + "functions/addCharity"
         let headers: HTTPHeaders = ["X-Parse-Application-Id": "11011011",
                                     "X-Parse-Session-Token": sessionToken]
-        let params: Parameters = ["charityId": "" ]
+        let params: Parameters = ["charityId": charityToAdd]
         return Promise<JSON>
             {
                 fulfill, reject in

@@ -59,7 +59,7 @@ class charityTable: UITableViewController {
         
         if (self.theCharities) != nil{
             let charityId = String(describing: theCharities["results"][indexPath.row]["objectId"])
-            auth().addUserCharity(updatedBalance: Float(charityId)!)
+            auth().addUserCharity(charityToAdd: charityId)
         }
         
         

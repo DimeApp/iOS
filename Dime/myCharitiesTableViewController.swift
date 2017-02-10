@@ -23,29 +23,24 @@ class myCharitiesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-    var theCount = 20;
-    
-//    theCount = theCharities["results"].count
+    var theCount = 20
+    // theCount = theCharities["results"].count
     return theCount
     
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier:"oneCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier:"oneCell", for: indexPath)
     
     
-    if let charity = self.theCharities{
-    cell.textLabel?.text = String( describing: charity["results"][indexPath.row]["name"])
-    cell.detailTextLabel?.text = String( describing: charity["results"][indexPath.row]["city"])+"\n"+String( describing: charity["results"][indexPath.row]["state"])+"\n"+String( describing: charity["results"][indexPath.row]["type"])
+        if let charity = self.theCharities
+        {
+            cell.textLabel?.text = String( describing: charity["results"][indexPath.row]["name"])
+            cell.detailTextLabel?.text = String( describing: charity["results"][indexPath.row]["city"])+"\n"+String( describing: charity["results"][indexPath.row]["state"])+"\n"+String( describing: charity["results"][indexPath.row]["type"])
     
-    
-    
-    }
-    
-    return cell
-    
-    
+        }
+        return cell
     }
 
 }

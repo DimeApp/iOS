@@ -41,6 +41,8 @@ class profileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
          auth().getBalance().then{
             
             (data) -> Void in

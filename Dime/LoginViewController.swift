@@ -21,6 +21,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passWordField: UITextField!
     
+    var loggingInAlert: UIAlertView = UIAlertView(title: "Logging In", message: "Please wait...", delegate: nil, cancelButtonTitle: "Cancel");
+    
+    var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 0.0, y: 0.0, width: 10, height: 10)) as UIActivityIndicatorView
+    
+    func startLogInIndicator(){
+    loadingIndicator.center = self.view.center;
+    loadingIndicator.hidesWhenStopped = true
+    loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+    loadingIndicator.startAnimating();
+        
+    loggingInAlert.addSubview(loadingIndicator)
+    loggingInAlert.show()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +61,9 @@ class LoginViewController: UIViewController {
            
             self.defaults.setValue(self.theSessionToken, forKey: "sessionToken")
         
+            
+            }.then{
+                self.loggingInAlert.dismiss(withClickedButtonIndex: 0, animated: true)
             
             }.then{
                 self.performSegue(withIdentifier: "profileSegue", sender: UIDevice.self)

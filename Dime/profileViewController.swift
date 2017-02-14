@@ -37,7 +37,6 @@ class profileViewController: UIViewController {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -93,8 +92,8 @@ class profileViewController: UIViewController {
         
         auth().getUserCharity().then{
             (charities) -> Void in
-            self.performSegue(withIdentifier: "myCharitiesSegue", sender: UIDevice.self)
             self.theCharities2 = charities
+            self.performSegue(withIdentifier: "myCharitiesSegue", sender: UIDevice.self)
             }.catch {_ in
                 print("fack")
         }
@@ -198,9 +197,9 @@ class profileViewController: UIViewController {
         if let destinationViewController = segue.destination as? transactionTableViewController{
             destinationViewController.theTransactions = self.theTransaction
         }
-//        if let destinationViewController = segue.destination as? myCharitiesTableViewController{
-//            destinationViewController.theCharities = self.theCharities2
-//        }
+        if let destinationViewController = segue.destination as? myCharitiesTableViewController{
+            destinationViewController.theCharities = self.theCharities2
+        }
         
         
     }

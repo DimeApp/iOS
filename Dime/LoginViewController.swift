@@ -75,5 +75,11 @@ class LoginViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? profileViewController {
+            destinationViewController.userName = self.email
+        }
+    }
+    
 }
 

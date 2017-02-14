@@ -319,6 +319,7 @@
                     </view>
                     <connections>
                         <outlet property="balanceLabel" destination="YaR-gf-2Yi" id="Onq-wV-sTy"/>
+                        <outlet property="userNameLabel" destination="BW2-5n-e5G" id="qx4-av-xm7"/>
                         <segue destination="aV1-iz-SyU" kind="show" identifier="charityListSegue" id="RFF-6R-c6a"/>
                         <segue destination="3Wf-Az-cf4" kind="show" identifier="transactionSegue" id="gFL-8h-lph"/>
                         <segue destination="FNM-CL-jit" kind="show" identifier="myCharitiesSegue" id="jmS-vB-ISg"/>

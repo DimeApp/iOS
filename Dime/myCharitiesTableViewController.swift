@@ -18,13 +18,13 @@ class myCharitiesTableViewController: UITableViewController {
     
     @IBOutlet weak var contentView: UIView!
     override func viewDidLoad() {
+        print(theCharities)
     super.viewDidLoad()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
-    var theCount = 20
-    // theCount = theCharities["results"].count
+
+    let theCount = theCharities["result"]["charities"].count
     return theCount
     
     }
@@ -36,8 +36,9 @@ class myCharitiesTableViewController: UITableViewController {
     
         if let charity = self.theCharities
         {
-            cell.textLabel?.text = String( describing: charity["results"][indexPath.row]["name"])
-            cell.detailTextLabel?.text = String( describing: charity["results"][indexPath.row]["city"])+"\n"+String( describing: charity["results"][indexPath.row]["state"])+"\n"+String( describing: charity["results"][indexPath.row]["type"])
+            
+            cell.textLabel?.text = String( describing: charity["result"]["charities"][indexPath.row]["name"])
+            cell.detailTextLabel?.text = String( describing: charity["result"]["charities"][indexPath.row]["city"])+"\n"+String( describing: charity["result"]["charities"][indexPath.row]["state"])+"\n"+String( describing: charity["result"]["charities"][indexPath.row]["type"])
     
         }
         return cell

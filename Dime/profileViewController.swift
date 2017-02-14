@@ -16,12 +16,14 @@ class profileViewController: UIViewController {
     }
     var theCharities:JSON!
     var theTransaction:JSON!
+    var userName: String!
     var bankUsername: String!
     var bankPassword: String!
     var balance: Float!
     var theCharities2:JSON!
     
 
+    
     
     @IBOutlet weak var balanceLabel: UILabel!
     
@@ -34,6 +36,7 @@ class profileViewController: UIViewController {
     @IBOutlet weak var profileTableView: UITableView!
     
     
+    @IBOutlet weak var userNameLabel: UILabel!
     
     
     
@@ -49,6 +52,7 @@ class profileViewController: UIViewController {
             print(data)
             self.balance = Float(String(describing: data["result"]["balance"]))
             self.balanceLabel.text = "$" + String(format: "%.2f", self.balance)
+            self.userNameLabel.text = self.userName
             
             }.catch{_ in
                 print("these teeny tiny hands!!!")

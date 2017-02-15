@@ -52,14 +52,22 @@ class charityTable: UITableViewController {
         
         
     }
-    
+    // when a user selects a cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
     self.rowSelected = indexPath.row
-        
+        // get the CharityID of the charity selected
         if (self.theCharities) != nil{
             let charityId = String(describing: theCharities["results"][indexPath.row]["objectId"])
+            
+            // use CharityID to add charity to User Charity Queue
             auth().addUserCharity(charityToAdd: charityId)
+            
+            // alert to let user know that charity was added succesfully
+            let alertController = UIAlertController(title: "Charity Added", message: "Charity Added to you Chairty Queue!", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
         }
         
         

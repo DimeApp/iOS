@@ -51,7 +51,15 @@ class profileViewController: UIViewController {
             //self.balanceLabel.text = String(format: "%2.f", String(describing:data["result"]["balance"]))
             print(data)
             self.balance = Float(String(describing: data["result"]["balance"]))
-            self.balanceLabel.text = "$" + String(format: "%.2f", self.balance)
+            // if transactions have not previously been calculated, this will be nil
+            if self.balance != nil
+            {
+                self.balanceLabel.text = "$" + String(format: "%.2f", self.balance)
+            }
+            else{
+                self.balanceLabel.text = "$0.00"
+                self.balance = 0.0
+            }
             self.userNameLabel.text = self.userName
             
             }.catch{_ in
@@ -104,12 +112,18 @@ class profileViewController: UIViewController {
     }
     
     func getTransactions(){
+        var old_balance: Float!
         auth().getTransactions()
             .then{
                 (transactions) -> Void in
                 self.theTransaction = transactions
 //                print(transactions)
-                let old_balance = self.balance
+                if self.balance != nil{
+                    old_balance = self.balance
+                }
+                else{
+                    old_balance = 0.0
+                }
                 self.balance = self.roundUp(balance: self.balance, json:transactions) + self.balance
                 self.balanceLabel.text = "$" + String(format: "%.2f", self.balance)
                 let x = self.balance - old_balance!

@@ -42,6 +42,7 @@ class auth {
                             {
                                 if let sessionToken: String = responseDictionary["sessionToken"] as? String
                                 {
+                                    print(sessionToken)
                                     fulfill(sessionToken)
                                 }
                             }

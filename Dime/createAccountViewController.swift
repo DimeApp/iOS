@@ -51,7 +51,8 @@ class createAccountViewController: UIViewController {
                 self.theSessionToken = sessionToken
                 print(sessionToken)
                 self.defaults.setValue(self.theSessionToken, forKey: "sessionToken")
-            }   
+                self.performSegue(withIdentifier: "profileSegue", sender: UIDevice.self)
+        }
 
         //}
         //  if either Password does not meet requirements OR/AND password fields do not match, raise alert

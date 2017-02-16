@@ -75,7 +75,8 @@ class profileViewController: UIViewController {
     }
 
     @IBAction func connectBank(_ sender: Any) {
-        presentAlert()
+        //presentAlert()
+        performSegue(withIdentifier: "linkSegue", sender: self)
         auth().getBankUserAccessToken().then{
             (resp) -> Void in
             print(resp)

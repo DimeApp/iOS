@@ -152,7 +152,7 @@ class auth {
     // in full version, passed user's banking login info to server, will return securiry question or prompt for pin
     func getBankUserAccessToken(publicToken: String) -> Promise<JSON>{
         let sessionToken = UserDefaults.standard.value(forKey: "sessionToken") as! String
-        let url = baseURL + "functions/userAccessToken"
+        let url = baseURL + "functions/storePlaidPublicToken"
         let headers: HTTPHeaders = ["X-Parse-Application-Id": "11011011",
                                     "X-Parse-Session-Token": sessionToken]
         let params: Parameters = ["public_token": publicToken]

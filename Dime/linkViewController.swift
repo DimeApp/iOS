@@ -97,6 +97,12 @@ class LinkViewController: UIViewController, WKNavigationDelegate {
                         }.catch{_ in
                             print("FACK")
                     }
+                    print(publicToken)
+                    
+                    profileViewController().bankAuthenticated = true
+                    if let bankName: String = queryParams["institution_name"]{
+                        profileViewController().bankName = bankName
+                    }
                 }
                 break
                 

@@ -22,9 +22,12 @@ class profileViewController: UIViewController {
     var balance: Float!
     var theCharities2:JSON!
     var publicToken:String!
+    var bankAuthenticated: Bool = false
+    var bankName: String!
     
 
     
+    @IBOutlet weak var connectBankButton: UIButton!
     
     @IBOutlet weak var balanceLabel: UILabel!
     
@@ -44,7 +47,10 @@ class profileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        if(bankAuthenticated){
+            // set connectbank button text to bankName + account connected
+            connectBankButton.setTitle(bankName, for: UIControlState.normal)
+        }
         
          auth().getBalance().then{
             
@@ -77,7 +83,12 @@ class profileViewController: UIViewController {
 
     @IBAction func connectBank(_ sender: Any) {
         //presentAlert()
-        performSegue(withIdentifier: "linkSegue", sender: self)
+        if(!bankAuthenticated){
+            performSegue(withIdentifier: "linkSegue", sender: self)
+        }
+        else{
+            print("bank already authed ya dingo why press?")
+        }
     }
     
     func getCharities(){

@@ -90,6 +90,14 @@ class LinkViewController: UIViewController, WKNavigationDelegate {
                 print("Account ID: \(queryParams["account_id"])");
                 print("Institution type: \(queryParams["institution_type"])");
                 print("Institution name: \(queryParams["institution_name"])");
+                if let publicToken: String = queryParams["public_token"]{
+                    auth().getBankUserAccessToken(publicToken: publicToken).then{
+                        (resp) -> Void in
+                        print(resp)
+                        }.catch{_ in
+                            print("FACK")
+                    }
+                }
                 break
                 
             case "exit"?:

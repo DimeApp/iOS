@@ -21,6 +21,7 @@ class profileViewController: UIViewController {
     var bankPassword: String!
     var balance: Float!
     var theCharities2:JSON!
+    var publicToken:String!
     
 
     
@@ -77,12 +78,6 @@ class profileViewController: UIViewController {
     @IBAction func connectBank(_ sender: Any) {
         //presentAlert()
         performSegue(withIdentifier: "linkSegue", sender: self)
-        auth().getBankUserAccessToken().then{
-            (resp) -> Void in
-            print(resp)
-            }.catch{_ in
-                print("FACK")
-        }
     }
     
     func getCharities(){

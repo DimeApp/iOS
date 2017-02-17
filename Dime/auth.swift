@@ -150,17 +150,17 @@ class auth {
         }
     }
     // in full version, passed user's banking login info to server, will return securiry question or prompt for pin
-    func getBankUserAccessToken() -> Promise<JSON>{
+    func getBankUserAccessToken(publicToken: String) -> Promise<JSON>{
         let sessionToken = UserDefaults.standard.value(forKey: "sessionToken") as! String
         let url = baseURL + "functions/userAccessToken"
         let headers: HTTPHeaders = ["X-Parse-Application-Id": "11011011",
                                     "X-Parse-Session-Token": sessionToken]
-//        let params: Parameters = ["username": "plaid_test",
-//                                  "password": "plaid_good"]
+        let params: Parameters = ["public_token": publicToken]
+
         return Promise<JSON>
             {
                 fulfill, reject in
-                Alamofire.request(url, method: .post, encoding: URLEncoding.httpBody, headers: headers)
+                Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: headers)
                     .validate(statusCode: 200..<300)
                     .responseJSON
                     {
@@ -333,11 +333,6 @@ class auth {
         }
         
     }
-    
-    
-
-    
-    
 // end of class
 }
 

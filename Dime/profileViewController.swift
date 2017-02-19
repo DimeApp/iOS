@@ -203,7 +203,7 @@ class profileViewController: UIViewController {
         for n in amts
         {
             print(n)
-            var amtUp: Float = ceil(n)
+            let amtUp: Float = ceil(n)
             
             amt2Donate += (amtUp-n)
         }

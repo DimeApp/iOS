@@ -444,7 +444,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Haa-vk-R2e" kind="show" identifier="profileSegue" id="Sjc-FN-F48"/>
+                        <segue destination="Haa-vk-R2e" kind="show" identifier="backToProfile" id="Sjc-FN-F48"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h80-Xt-P9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -465,7 +465,7 @@
                         <color key="sectionIndexBackgroundColor" red="0.49106898040000002" green="0.72638404190000005" blue="0.54490085369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="oneCell" textLabel="dNY-nc-o7G" detailTextLabel="bE3-RU-o2g" rowHeight="170" style="IBUITableViewCellStyleSubtitle" id="DbE-3D-xYF" customClass="SingleCharityTableViewCell" customModule="Dime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55" width="375" height="171"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DbE-3D-xYF" id="eNB-vV-0c7">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>

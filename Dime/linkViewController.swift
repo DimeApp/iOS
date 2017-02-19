@@ -14,6 +14,7 @@ class LinkViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet var containerView : UIView? = nil
     
     var webView: WKWebView!
+    var bankAuthenticated: Bool = false
     
     override func loadView() {
         self.webView = WKWebView()
@@ -22,6 +23,7 @@ class LinkViewController: UIViewController, WKNavigationDelegate {
     }
     
     override func viewDidLoad() {
+        self.navigationController!.isNavigationBarHidden = true
         super.viewDidLoad()
         
         // load the link url
@@ -35,6 +37,12 @@ class LinkViewController: UIViewController, WKNavigationDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? profileViewController {
+            destinationViewController.bankAuthenticated = self.bankAuthenticated
+        }
     }
     
     // getUrlParams :: parse query parameters into a Dictionary
@@ -97,12 +105,19 @@ class LinkViewController: UIViewController, WKNavigationDelegate {
                         }.catch{_ in
                             print("FACK")
                     }
+                    bankAuthenticated = true
                     print(publicToken)
                     
-                    profileViewController().bankAuthenticated = true
-                    if let bankName: String = queryParams["institution_name"]{
-                        profileViewController().bankName = bankName
-                    }
+                    let alertController = UIAlertController(title: "Success!", message: "Account succesfully linked to dime!", preferredStyle: .alert)
+                    let okay = UIAlertAction(title: "OK!", style: .default, handler: {_ in
+                        CATransaction.setCompletionBlock({
+                             self.performSegue(withIdentifier: "backToProfile", sender: nil)
+                        })
+                    })
+                    alertController.addAction(okay)
+                    present(alertController, animated: true, completion: nil)
+                    
+                   
                 }
                 break
                 
@@ -120,6 +135,7 @@ class LinkViewController: UIViewController, WKNavigationDelegate {
                 // the Link flow.
                 print("Link request ID: \(queryParams["link_request_id"])");
                 print("Plaid API request ID: \(queryParams["link_request_id"])");
+                performSegue(withIdentifier: "backToProfile", sender: UIDevice.self)
                 break
                 
             default:

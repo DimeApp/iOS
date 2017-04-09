@@ -120,7 +120,7 @@
                         <outlet property="emailField" destination="cyG-UN-5Pp" id="UGX-wh-rKk"/>
                         <outlet property="passWordField" destination="nHd-JP-fXr" id="qOX-WQ-Pd7"/>
                         <outlet property="userNameField" destination="fRp-Ep-E9s" id="BJ3-28-1dk"/>
-                        <segue destination="Haa-vk-R2e" kind="show" identifier="profileSegue" id="URl-OS-ShB"/>
+                        <segue destination="Rje-in-t1V" kind="show" identifier="profileSegue" id="URl-OS-ShB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNB-rq-OQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,17 +143,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="674"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYU-gY-kYJ">
-                                <rect key="frame" x="92" y="627" width="190" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.00107819959" green="3.5971426800000003e-05" blue="0.0011302347720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iaY-jq-Xbx" kind="show" id="a6L-ji-c4C"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7A-oi-93z">
                                 <rect key="frame" x="92" y="537" width="190" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -208,6 +197,17 @@
                                 <rect key="frame" x="78" y="167" width="218" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYU-gY-kYJ">
+                                <rect key="frame" x="92" y="577" width="190" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.00107819959" green="3.5971426800000003e-05" blue="0.0011302347720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iaY-jq-Xbx" kind="show" id="a6L-ji-c4C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -216,7 +216,7 @@
                         <outlet property="emailField" destination="MJq-Kz-bMF" id="1BQ-Fk-nZc"/>
                         <outlet property="passWordField" destination="jJN-66-JdO" id="efL-MA-occ"/>
                         <segue destination="iaY-jq-Xbx" kind="show" identifier="SignUpSegue" id="Acf-pk-wHj"/>
-                        <segue destination="Haa-vk-R2e" kind="show" identifier="profileSegue" id="qoh-lc-HxI"/>
+                        <segue destination="Rje-in-t1V" kind="show" identifier="profileSegue" id="qoh-lc-HxI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -235,73 +235,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeView BG" translatesAutoresizingMaskIntoConstraints="NO" id="MJ5-01-8q5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="MJ5-01-8q5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YH4-0v-hRy">
-                                <rect key="frame" x="0.0" y="307" width="375" height="112"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyv-xw-3lq">
+                                <rect key="frame" x="0.0" y="502" width="375" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90333551168441772" green="1" blue="0.92739099264144897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="My Charities" backgroundImage="transaction button">
+                                <color key="tintColor" red="0.1329490750531459" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="  Browse Charities" image="Hearts-50">
                                     <color key="titleColor" red="0.18039215689999999" green="0.72549019609999998" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="transactionButton:" destination="Haa-vk-R2e" eventType="touchUpInside" id="8OV-g6-KIF"/>
+                                    <action selector="getAllCharities:" destination="Haa-vk-R2e" eventType="touchUpInside" id="XbI-jE-yqf"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile Header" translatesAutoresizingMaskIntoConstraints="NO" id="kon-Z0-Ztb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="112"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DimeLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="c1o-Ak-T0r">
+                                <rect key="frame" x="56" y="76" width="262" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1s-Ld-XH4" userLabel="Browse Charities">
-                                <rect key="frame" x="0.0" y="555" width="375" height="112"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35k-B5-8he">
+                                <rect key="frame" x="0.0" y="418" width="375" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90333551170000004" green="1" blue="0.92739099260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Browse Charities                        " backgroundImage="charities button">
-                                    <color key="titleColor" red="0.1803921568627451" green="0.72549019607843135" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.1329490750531459" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="  Transactions" image="Recent Button">
+                                    <color key="titleColor" red="0.18039215689999999" green="0.72549019609999998" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="browseCharity:" destination="Haa-vk-R2e" eventType="touchUpInside" id="9Pa-W1-aQw"/>
+                                    <action selector="transactionButton:" destination="Haa-vk-R2e" eventType="touchUpInside" id="WAG-Xu-1cx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h44-uQ-wRx">
+                                <rect key="frame" x="0.0" y="586" width="375" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90333551168441772" green="1" blue="0.92739099264144897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="tintColor" red="0.1329490750531459" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="  My Charities" image="Home Button">
+                                    <color key="titleColor" red="0.18039215689999999" green="0.72549019609999998" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="myCharities:" destination="Haa-vk-R2e" eventType="touchUpInside" id="MCg-fh-MMJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLb-3K-G1z">
+                                <rect key="frame" x="0.0" y="334" width="375" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90333551170000004" green="1" blue="0.92739099260000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="tintColor" red="0.13294907510000001" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="  Connect Bank" image="Purchases Button">
+                                    <color key="titleColor" red="0.18039215689999999" green="0.72549019609999998" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectToBank:" destination="Haa-vk-R2e" eventType="touchUpInside" id="qUf-A3-fSc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-gf-2Yi">
-                                <rect key="frame" x="116" y="184" width="143" height="99"/>
+                                <rect key="frame" x="116" y="208" width="143" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caQ-em-kS4">
-                                <rect key="frame" x="0.0" y="427" width="375" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Transactions                   " backgroundImage="transaction button">
-                                    <color key="titleColor" red="0.1803921568627451" green="0.72549019607843135" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="transactionButton:" destination="Haa-vk-R2e" eventType="touchUpInside" id="ybo-FG-Re2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYD-3p-xRV">
-                                <rect key="frame" x="144" y="147" width="87" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                <state key="normal" title="Connect Bank">
-                                    <color key="titleColor" red="0.053923623331118491" green="0.65021611487555409" blue="0.70106281725888331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="connectBank:" destination="Haa-vk-R2e" eventType="touchUpInside" id="VLj-NR-Lhh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uQi-ov-pSu"/>
                     <connections>
                         <outlet property="balanceLabel" destination="YaR-gf-2Yi" id="Onq-wV-sTy"/>
-                        <outlet property="connectBankButton" destination="HYD-3p-xRV" id="4q4-Lu-JeK"/>
+                        <outlet property="connectBankButton" destination="JLb-3K-G1z" id="CpF-4t-rsY"/>
                         <segue destination="aV1-iz-SyU" kind="show" identifier="charityListSegue" id="RFF-6R-c6a"/>
                         <segue destination="3Wf-Az-cf4" kind="show" identifier="transactionSegue" id="gFL-8h-lph"/>
                         <segue destination="FNM-CL-jit" kind="show" identifier="myCharitiesSegue" id="jmS-vB-ISg"/>
@@ -310,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTz-RB-FiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2727.1999999999998" y="625.63718140929541"/>
+            <point key="canvasLocation" x="3666.4000000000001" y="625.63718140929541"/>
         </scene>
         <!--Transaction Table View Controller-->
         <scene sceneID="9fO-5z-jYt">
@@ -320,6 +327,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GNK-2L-XJh">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Back to Profile"/>
+                            <connections>
+                                <segue destination="Haa-vk-R2e" kind="show" id="Igy-kQ-I7L"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="theCell" id="9J3-AG-9uU">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -338,7 +353,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uQ-Je-rei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3668" y="1081"/>
+            <point key="canvasLocation" x="4332" y="1523"/>
         </scene>
         <!--Charities-->
         <scene sceneID="kWb-zg-7AB">
@@ -352,9 +367,17 @@
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.49106898042063263" green="0.72638404186040617" blue="0.54490085368545349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8ik-xw-mdd">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Back to Profile"/>
+                            <connections>
+                                <segue destination="Haa-vk-R2e" kind="show" id="lJw-Aw-9iW"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="oneCell" textLabel="Lcj-Vv-wc2" detailTextLabel="Vhk-T0-C6j" rowHeight="170" style="IBUITableViewCellStyleSubtitle" id="6ku-3N-8hN" customClass="SingleCharityTableViewCell" customModule="Dime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="170"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6ku-3N-8hN" id="ERU-8l-FTy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
@@ -388,11 +411,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ea-ac-Ce2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3668" y="310.79460269865069"/>
+            <point key="canvasLocation" x="6832.8000000000002" y="884.70764617691157"/>
         </scene>
         <!--Nav Controller-->
         <scene sceneID="ZZa-B8-tzu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNa-o4-cog" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="abD-jN-qMF" customClass="navController" customModule="Dime" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
@@ -407,7 +431,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xbr-1i-7Bo"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eNa-o4-cog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1254" y="-177"/>
         </scene>
@@ -425,7 +448,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Haa-vk-R2e" kind="show" identifier="backToProfile" id="Sjc-FN-F48"/>
+                        <segue destination="Rje-in-t1V" kind="show" identifier="backToProfile" id="Sjc-FN-F48"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h80-Xt-P9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -444,16 +467,24 @@
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.49106898040000002" green="0.72638404190000005" blue="0.54490085369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FZb-5S-eEf">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Back to Profile"/>
+                            <connections>
+                                <segue destination="Haa-vk-R2e" kind="show" id="ndr-S0-nig"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="oneCell" textLabel="dNY-nc-o7G" detailTextLabel="bE3-RU-o2g" rowHeight="170" style="IBUITableViewCellStyleSubtitle" id="DbE-3D-xYF" customClass="SingleCharityTableViewCell" customModule="Dime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="170"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DbE-3D-xYF" id="eNB-vV-0c7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dNY-nc-o7G">
-                                            <rect key="frame" x="84" y="68" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="84" y="67" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -461,7 +492,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bE3-RU-o2g">
-                                            <rect key="frame" x="84" y="88.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="84" y="88" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -480,19 +511,43 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AK6-lp-HXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2727" y="1459"/>
+            <point key="canvasLocation" x="3036" y="1727"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mwm-0E-BQe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rje-in-t1V" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vE7-Xv-NCA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Haa-vk-R2e" kind="relationship" relationship="rootViewController" id="Fiq-A5-lUI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXY-xH-HM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XxX-kx-RHb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Back to Profile"/>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="2727.1999999999998" y="625.63718140929541"/>
         </scene>
     </scenes>
     <resources>
         <image name="DimeLogoWhite" width="1462" height="493"/>
-        <image name="Profile Header" width="375" height="112"/>
-        <image name="charities button" width="375" height="112"/>
-        <image name="homeView BG" width="375" height="667"/>
+        <image name="Hearts-50" width="18" height="17"/>
+        <image name="Home Button" width="22" height="22"/>
+        <image name="Purchases Button" width="22" height="22"/>
+        <image name="Recent Button" width="32" height="32"/>
         <image name="loginBG" width="375" height="667"/>
-        <image name="transaction button" width="375" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a6L-ji-c4C"/>
+        <segue reference="Acf-pk-wHj"/>
         <segue reference="Sjc-FN-F48"/>
+        <segue reference="Igy-kQ-I7L"/>
     </inferredMetricsTieBreakers>
 </document>

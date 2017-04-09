@@ -11,9 +11,25 @@ import SwiftyJSON
 import PromiseKit
 
 class profileViewController: UIViewController {
-    @IBAction func myCharitiesButton(_ sender: Any) {
-        self.getMyCharitiea()
+    @IBAction func myCharities(_ sender: UIButton) {
+         self.getMyCharitiea()
     }
+    @IBAction func getAllCharities(_ sender: Any) {
+        self.getCharities()
+       
+    }
+    
+    
+    @IBAction func connectToBank(_ sender: Any) {
+        if(!bankAuthenticated){
+            performSegue(withIdentifier: "linkSegue", sender: self)
+        }
+        else{
+            print("bank already authed ya dingo why press?")
+        }
+    }
+   
+
     var theCharities:JSON!
     var theTransaction:JSON!
     var userName: String!
@@ -32,9 +48,7 @@ class profileViewController: UIViewController {
     @IBAction func transactionButton(_ sender: Any) {
         self.getTransactions()
     }
-    @IBAction func browseCharity(_ sender: Any) {
-        self.getCharities()
-    }
+
     @IBOutlet weak var profileTableView: UITableView!
     
     
@@ -43,6 +57,8 @@ class profileViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        self.balanceLabel.font = balanceLabel.font.withSize(40);
+        
         self.navigationController!.isNavigationBarHidden = true
         super.viewDidLoad()
         
@@ -64,13 +80,14 @@ class profileViewController: UIViewController {
             // if transactions have not previously been calculated, this will be nil
             if self.balance != nil
             {
+                
                 self.balanceLabel.text = "$" + String(format: "%.2f", self.balance)
             }
             else{
                 self.balanceLabel.text = "$0.00"
                 self.balance = 0.0
             }
-            self.userNameLabel.text = self.userName
+//            self.userNameLabel.text = self.userName
             
             }.catch{_ in
                 print("these teeny tiny hands!!!")
